@@ -13,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
 public class DefaultGoogleMapsService implements GoogleMapsService {
 
     @Value("${gmaps.apiKey}")
-    private final String apiKey;
+    private String apiKey;
 
     private static final String GMAPS_TEMPLATE = "https://maps.googleapis.com/maps/api/directions/json?origin={origin}&destination={destination}&key={key}";
 
